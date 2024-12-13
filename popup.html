@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Accessibility Enhancer</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Accessibility Settings</h1>
+        
+        <section aria-labelledby="focus-settings">
+            <h2 id="focus-settings">Focus Ring</h2>
+            <div class="control-group">
+                <label for="focus-color">Color:</label>
+                <input type="color" id="focus-color" value="#1a73e8">
+                <label for="focus-width">Width (px):</label>
+                <input type="number" id="focus-width" min="1" max="10" value="3">
+            </div>
+        </section>
+
+        <section aria-labelledby="text-settings">
+            <h2 id="text-settings">Text Settings</h2>
+            <div class="control-group">
+                <label for="text-spacing">Letter Spacing:</label>
+                <input type="range" id="text-spacing" min="0" max="5" step="0.5" value="0">
+                
+                <label for="line-height">Line Height:</label>
+                <input type="range" id="line-height" min="1" max="3" step="0.1" value="1.5">
+                
+                <label for="text-size">Text Size:</label>
+                <input type="range" id="text-size" min="100" max="200" value="100">
+            </div>
+        </section>
+
+        <section aria-labelledby="color-settings">
+            <h2 id="color-settings">Color Settings</h2>
+            <div class="control-group">
+                <label for="high-contrast">High Contrast Mode:</label>
+                <input type="checkbox" id="high-contrast">
+                
+                <div class="color-pickers">
+                    <label for="foreground-color">Text Color:</label>
+                    <input type="color" id="foreground-color" value="#000000">
+                    
+                    <label for="background-color">Background:</label>
+                    <input type="color" id="background-color" value="#ffffff">
+                </div>
+            </div>
+        </section>
+
+        <section aria-labelledby="animation-settings">
+            <h2 id="animation-settings">Animations</h2>
+            <div class="control-group">
+                <label for="stop-animations">Stop Animations:</label>
+                <input type="checkbox" id="stop-animations">
+            </div>
+        </section>
+
+        <button id="reset" class="reset-button" aria-label="Reset all settings to default">
+            Reset Settings
+        </button>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>
